@@ -5,7 +5,7 @@ import RequireAuth from "./components/RequireAuth";
 
 const Login = lazy(() => import("./pages/Login"));
 const Home = lazy(() => import("./pages/Home"));
-const RedirectPage = lazy(() => import("./pages/RedirectPage"));
+import RedirectPage from "./pages/RedirectPage";
 const ErrorPage = lazy(() => import("./pages/ErrorPage"));
 function App() {
   return (

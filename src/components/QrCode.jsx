@@ -12,7 +12,7 @@ const QrCode = ({ item }) => {
     qrImage && (
       <motion.img
         src={qrImage}
-        className="w-[50%] md:w-[30%]"
+        className="w-[55%] md:w-[30%]"
         variants={item}
       />
     )

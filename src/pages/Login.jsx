@@ -74,7 +74,7 @@ const Login = () => {
               className=" hidden md:block w-[40%] select-none "
             />
           )}
-      <div className="flex flex-col  w-[75%] md:w-[75%] lg:w-[50%] h-full md:h-[70%] items-center justify-center space-y-2 md:space-y-4">
+      <div className="flex flex-col  w-[90%] md:w-[75%] lg:w-[50%] h-full md:h-[70%] items-center justify-center space-y-2 md:space-y-4">
         <h1 className=" select-none text-xl font-bold text-center title-font capitalize  border-b-2  w-full p-2 mb-0 md:mb-4">
           Sign in{" "}
         </h1>
@@ -82,9 +82,9 @@ const Login = () => {
           variants={variantsContainer}
           initial="hidden"
           animate="visible"
-          className="flex flex-col md:flex-row items-center  md:items-start justify-evenly w-full h-[70%] pt-3 md:pt-6"
+          className="flex flex-col md:flex-row items-center  md:items-start justify-evenly w-full h-[70%] pt-3 md:pt-6 space-y-4 md:space-y-0"
         >
-          <motion.div className="  w-[75%] md:w-[50%] " variants={variantsItem}>
+          <motion.div className="  w-full md:w-[50%] " variants={variantsItem}>
             <motion.form
               onSubmit={handleSubmit(onSubmit)}
               className=" flex flex-col  items-center justify-center w-full  space-y-7"
@@ -146,7 +146,7 @@ const Login = () => {
           </motion.div>
           <motion.div
             variants={variantsItem}
-            className="flex md:flex-col  items-center justify-center w-[75%] md:w-10 md:h-[70%] space-x-2 md:space-x-0 md:space-y-2"
+            className="flex md:flex-col  items-center justify-center w-full md:w-10 md:h-[70%] space-x-2 md:space-x-0 md:space-y-2"
           >
             <div className="w-full md:w-0.5 h-0.5 md:h-[50%] bg-gray-300" />
             <span className="text-base md:text-lg font-bold text-center title-font capitalize  ">

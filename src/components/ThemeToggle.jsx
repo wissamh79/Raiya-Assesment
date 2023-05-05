@@ -7,19 +7,19 @@ const ThemeToggle = () => {
   return (
     <div className="p-2">
       {theme === "dark" ? (
-        <div
-          className="flex items-center cursor-pointer"
+        <button
+          className="flex items-center  select-none"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
           <FiSun size={25} className=" " />
-        </div>
+        </button>
       ) : (
-        <div
-          className="flex items-center cursor-pointer"
+        <button
+          className="flex items-center  select-none"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
           <FiMoon size={25} className=" " />
-        </div>
+        </button>
       )}
     </div>
   );

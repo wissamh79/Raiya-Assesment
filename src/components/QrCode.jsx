@@ -5,7 +5,9 @@ const QrCode = ({ item }) => {
   const [qrImage, setQrImage] = useState("");
 
   useEffect(() => {
-    QRCode.toDataURL("http://localhost:5173/redirect").then(setQrImage);
+    QRCode.toDataURL("https://raiya-assesment.onrender.com/redirect").then(
+      setQrImage
+    );
   }, []);
 
   return (

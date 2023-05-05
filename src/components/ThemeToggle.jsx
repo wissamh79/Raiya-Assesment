@@ -11,14 +11,14 @@ const ThemeToggle = () => {
           className="flex items-center  select-none"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
-          <FiSun size={25} className=" " />
+          <FiSun size={25} className="select-none " />
         </button>
       ) : (
         <button
           className="flex items-center  select-none"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
-          <FiMoon size={25} className=" " />
+          <FiMoon size={25} className="select-none " />
         </button>
       )}
     </div>

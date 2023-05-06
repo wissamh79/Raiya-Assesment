@@ -33,7 +33,7 @@ const Header = () => {
       variants={variantsContainer}
       initial="hidden"
       animate="visible"
-      className="sticky  flex  items-center justify-between h-[50px] w-full   py-2"
+      className="fixed flex  items-center justify-between h-[50px] w-full   py-2 px-8 md:px-16 opacity-25 "
     >
       <motion.h1
         variants={variantsItem}
@@ -44,7 +44,7 @@ const Header = () => {
 
       <motion.div
         variants={variantsItem}
-        className="flex items-center space-x-4 text-black dark:text-white  py-1 "
+        className="flex items-center space-x-6 text-black dark:text-white  py-1 "
       >
         <ThemeToggle />
         {state?.auth && (

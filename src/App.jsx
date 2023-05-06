@@ -5,12 +5,16 @@ import RequireAuth from "./components/RequireAuth";
 
 const Login = lazy(() => import("./pages/Login"));
 const Home = lazy(() => import("./pages/Home"));
-import RedirectPage from "./pages/RedirectPage";
+const RedirectPage = lazy(() => import("./pages/RedirectPage"));
 const ErrorPage = lazy(() => import("./pages/ErrorPage"));
 function App() {
   return (
     <Suspense
-      fallback={<div className="flex items-center justify-center "></div>}
+      fallback={
+        <div className="flex items-center justify-center w-full h-screen ">
+          <span className="loader"></span>
+        </div>
+      }
     >
       <Routes>
         {/* public routes */}

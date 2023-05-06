@@ -31,7 +31,7 @@ const Login = () => {
           variants={variantsContainer}
           initial="hidden"
           animate="visible"
-          className="flex flex-col md:flex-row items-center  md:items-start justify-evenly w-full h-[70%] md:h-fit pt-3 md:pt-6 space-y-4 md:space-y-0"
+          className="flex flex-col md:flex-row items-center  md:items-start justify-evenly w-full h-[70%] sm:h-full md:h-fit pt-3 md:pt-6 space-y-4 md:space-y-0"
         >
           {/* Login */}
           <motion.div className="  w-full md:w-[50%] " variants={variantsItem}>

@@ -1,7 +1,7 @@
 import ThemeToggle from "./ThemeToggle";
 
 import { AiOutlineLogout } from "react-icons/ai";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useApp } from "../context";
 import { motion } from "framer-motion";
 import { variantsContainer, variantsItem } from "./motion";
@@ -33,7 +33,7 @@ const Header = () => {
       variants={variantsContainer}
       initial="hidden"
       animate="visible"
-      className="fixed flex  items-center justify-between h-[50px] w-full   py-2 px-8 md:px-16 opacity-25 "
+      className="flex  items-center justify-between h-[50px] w-full   py-2 "
     >
       <motion.h1
         variants={variantsItem}

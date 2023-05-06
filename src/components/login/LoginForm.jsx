@@ -17,6 +17,7 @@ import {
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const { state, dispatch } = useApp();
   const {
@@ -53,8 +54,8 @@ const LoginForm = () => {
       });
 
       navigate("/home");
-    } catch (error) {
-      console.log(error);
+    } catch (errorMessage) {
+      setError(errorMessage);
     } finally {
       setIsLoading(true);
     }
@@ -72,6 +73,9 @@ const LoginForm = () => {
       initial="hidden"
       animate="visible"
     >
+      {error && (
+        <p className=" text-base font-semibold text-red-300">{error}</p>
+      )}
       <motion.div
         className={` relative flex flex-col items-center justify-center w-full  rounded shadow-xl  `}
         variants={variantsItem}

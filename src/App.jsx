@@ -1,35 +1,23 @@
-import { Suspense, lazy } from "react";
-import { Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
-import RequireAuth from "./components/RequireAuth";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Experience from "./components/Experience";
+import Home from "./components/Home";
+import NavBar from "./components/NavBar";
+import Portfolio from "./components/Portfolio";
+import SocialLinks from "./components/SocialLinks";
 
-const Login = lazy(() => import("./pages/Login"));
-const Home = lazy(() => import("./pages/Home"));
-const RedirectPage = lazy(() => import("./pages/RedirectPage"));
-const ErrorPage = lazy(() => import("./pages/ErrorPage"));
 function App() {
   return (
-    <Suspense
-      fallback={
-        <div className="flex items-center justify-center w-full h-screen ">
-          <span className="loader"></span>
-        </div>
-      }
-    >
-      <Routes>
-        {/* public routes */}
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Login />} />
-          <Route path="redirect" element={<RedirectPage />}></Route>
-          {/* protect routes */}
-          <Route path="home" element={<RequireAuth />}>
-            <Route index element={<Home />}></Route>
-          </Route>
-        </Route>
-        {/* catch all */}
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-    </Suspense>
+    <div>
+      <NavBar />
+      <Home />
+      <About />
+      <Portfolio />
+      <Experience />
+      <Contact />
+
+      <SocialLinks />
+    </div>
   );
 }
 
